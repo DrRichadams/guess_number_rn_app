@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react"
-import { View, Text, StyleSheet, Alert, ScrollView, FlatList } from "react-native"
+import { View, Text, StyleSheet, Alert, FlatList, Dimensions } from "react-native"
 
 import { Ionicons } from "@expo/vector-icons"
 
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         flexDirection: "row",
         justifyContent: "space-between",
-        marginTop: 20,
+        marginTop: Dimensions.get('window').height > 600 ? 30: 10,
         width: 400,
         maxWidth: "90%"
     },list: {
